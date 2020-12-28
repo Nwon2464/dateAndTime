@@ -30,8 +30,12 @@ const userEnteredDateTimeStamp = Date.UTC(
 const dateFromAPI = new Date("1989-12-20T00:00:00Z");
 const result = userEnteredDateTimeStamp == dateFromAPI.getTime(); // true
 
+// Finding the Difference Between Two Dates.
+//Convert both dates to UTC time stamp, find the difference in milliseconds and find the equivalent days.
+const dateFromAPI = "2016-02-10T00:00:00Z";
 
+const now = new Date();
+const datefromAPITimeStamp = (new Date(dateFromAPI)).getTime();
+const nowTimeStamp = now.getTime();
 
-// Finding the Difference Between Two Dates
-//
-
+const microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
